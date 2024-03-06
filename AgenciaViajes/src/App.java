@@ -61,6 +61,10 @@ public class App {
 				Habitacion idHabitacionMod2 = Formulario.pedirNuevosDatosHabitacion(scan);
 				GestorBBDD.modificarHabitacion(idHabitacionMod2, idHabitacionMod);
 				break;
+				
+			case 6:
+				
+				break;
 			default:
 				break;
 			}
