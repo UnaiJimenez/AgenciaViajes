@@ -45,8 +45,8 @@ public class App {
 			case REALIZAR_RESERVA:
 				ArrayList<Hotel> hoteles1 = GestorBBDD.getHoteles();
 				Visor.mostrarHoteles(hoteles1);
-				int idHotel1 = Formulario.pedirHotel(scan);
-				ArrayList<Habitacion> habitaciones1 = GestorBBDD.getHabitaciones(idHotel1);
+				int idHotelReservar = Formulario.pedirHotel(scan);
+				ArrayList<Habitacion> habitaciones1 = GestorBBDD.getHabitaciones(idHotelReservar);
 				Visor.mostrarHabitaciones(habitaciones1);
 				int idHabitacion = Formulario.pedirHabitacion(scan);
 				String idDni = Formulario.pedirDni(scan);
@@ -63,7 +63,10 @@ public class App {
 				break;
 				
 			case 6:
-				
+				ArrayList<Hotel> hoteles2 = GestorBBDD.getHoteles();
+				Visor.mostrarHoteles(hoteles2);
+				int idHotelRes = Formulario.pedirHotel(scan);
+				GestorBBDD.getHabitacionesRes(idHotelRes);
 				break;
 			default:
 				break;
